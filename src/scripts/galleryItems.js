@@ -9,7 +9,8 @@ var galleryItems = {
                 img = document.createElement('img');
 
                 li.classList.add('image-box');
-                img.setAttribute('src', item.image);
+                img.setAttribute('data-src', item.image);
+                img.classList.add('lazy');
                 img.alt = "Image";
 
                 li.appendChild(img);
