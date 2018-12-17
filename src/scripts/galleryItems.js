@@ -17,7 +17,26 @@ var galleryItems = {
                 ul.appendChild(li);
             });
             ul.appendChild(fragment);
-        }
+        },
+    enlarge: function () {
+        let ul = document.querySelector('.gallery');
+
+        ul.addEventListener('click', function (e) {
+            let selectedImg = e.target;
+            if(e.target.src) {
+
+                let modal = document.getElementById('myModal');
+                modal.style.display = "block";
+                let modalImg = document.getElementById("modalImg");
+                modalImg.src = selectedImg.src;
+
+                let span = document.getElementsByClassName("close")[0];
+                span.onclick = function () {
+                    modal.style.display = "none";
+                }
+            }
+        });
+    }
 };
 
 export default galleryItems;

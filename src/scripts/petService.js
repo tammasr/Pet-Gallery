@@ -8,12 +8,11 @@ var PetService = {
 function fetchPets () {
     let dogs = [];
     return fetch('../public/dogs.json')
-        .then(function(response) {
-            return response.json();
-        })
+        .then(function(response) { return response.json();})
         .then((data) => {
             dogs = data.dogs;
             galleryItems.load(dogs);
+            galleryItems.enlarge();
         });
 }
 export default PetService;

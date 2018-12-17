@@ -21,7 +21,6 @@ var lazyload = {
             }, 20);
         }
     }
-
 };
 
 export default lazyload;

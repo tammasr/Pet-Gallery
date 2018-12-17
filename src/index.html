@@ -6,11 +6,27 @@
   <title>Pet Gallery</title>
 </head>
 <body>
-<h1>Gallery</h1>
+<header class="global-header" role="banner">
+  <h1>Puppy image gallery</h1>
+  <blockquote class="header-quote">
+    <p>A dog will teach you unconditional love. If you can have that in your life, things won't be too bad.</p>
+    <cite>&mdash;Robert Wagner</cite>
+  </blockquote>
+</header>
 
 <div class="container">
   <!-- The Gallery -->
   <ul class="gallery"></ul>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImg">
+  </div>
 </div>
+
+<footer class="global-footer">
+  <p>@Built by a wonderful developer for Asana.</p>
+</footer>
 </body>
 </html>
