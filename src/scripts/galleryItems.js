@@ -1,4 +1,6 @@
 var galleryItems = {
+
+    // Construct the DOM thumbnail images
     load: function (dogs) {
             let li, img;
             let ul = document.querySelector('.gallery');
@@ -18,9 +20,12 @@ var galleryItems = {
             });
             ul.appendChild(fragment);
         },
+
+    // Add modal popup
     enlarge: function () {
         let ul = document.querySelector('.gallery');
 
+        // event bubbling - will capture the target element
         ul.addEventListener('click', function (e) {
             let selectedImg = e.target;
             if(e.target.src) {
@@ -33,7 +38,7 @@ var galleryItems = {
                 let span = document.getElementsByClassName("close")[0];
                 span.onclick = function () {
                     modal.style.display = "none";
-                }
+                };
             }
         });
     }

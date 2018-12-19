@@ -4,7 +4,9 @@ Pet Gallery Application:
 
 Images will be displayed on the page as a set of thumbnails; clicking on a thumbnail will display a full-sized image to the user.
 
-User will be able to close the image and return to the thumbnail gallery
+User will be able to close the image and return to the thumbnail gallery.
+
+Choice: Growth focus
 
 ### Installation
 
@@ -24,7 +26,7 @@ npm start
 npm run build
 ```
 
-###Technologies Used:
+### Technologies Used:
 * HTML5
 * CSS3, SASS
 * Javascript, ES6

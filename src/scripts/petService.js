@@ -5,6 +5,10 @@ var PetService = {
     fetchPets: fetchPets
 };
 
+/**
+ * Fetch from local json file.
+ * After the data is resolved gallery items will be loaded.
+ */
 function fetchPets () {
     let dogs = [];
     return fetch('../public/dogs.json')
