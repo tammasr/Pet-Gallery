@@ -10,13 +10,13 @@ var lazyLoad = {
                 let scrollTop = window.pageYOffset;
                 lazyloadImages.forEach(function (img) {
                     if (img.offsetTop < (window.innerHeight + scrollTop)) {
-                        img.src = img.dataset.src;
+                        img.setAttribute('src', img.getAttribute('data-src'));
                         img.classList.remove('lazy');
 
                         lazyloadImages = lazyloadImages.filter(function (image) {
                             return image !== img;
                         });
-                        if (lazyloadImages.length === 0) {
+                        if (!lazyloadImages.length) {
                             document.removeEventListener("scroll", lazyLoad.loadImages);
                             window.removeEventListener("resize", lazyLoad.loadImages);
                             window.removeEventListener("load", lazyLoad.loadImages);
@@ -25,7 +25,7 @@ var lazyLoad = {
                     }
                 });
                 active = false;
-            }, 200);
+            }, 20);
         }
     }
 };

@@ -13,7 +13,8 @@ var galleryItems = {
                 li.classList.add('image-box');
                 img.setAttribute('data-src', item.image);
                 img.classList.add('lazy');
-                img.alt = "Image";
+                img.setAttribute('alt', "Image");
+                img.setAttribute('src', "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
 
                 li.appendChild(img);
                 ul.appendChild(li);
